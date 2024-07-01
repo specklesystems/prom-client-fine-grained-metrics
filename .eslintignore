@@ -1,0 +1,6 @@
+dist
+helm
+node_modules
+output
+public
+schemas/spec/*.ts
