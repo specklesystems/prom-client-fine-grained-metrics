@@ -1,0 +1,47 @@
+{
+  "author": "Speckle Systems",
+  "description": "Default metrics for prom-client with higher frequency collection to histogram",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "eslint": "9.x",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-promise": "^6.4.0",
+    "globals": "^15.7.0",
+    "lockfile-lint": "^4.14.0",
+    "prettier": "^3.3.2",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^7.14.1"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "license": "Apache 2.0",
+  "name": "prom-client-fine-grained-metrics",
+  "packageManager": "yarn@4.2.2",
+  "repository": "https://github.com/specklesystems/prom-client-fine-grained-metrics",
+  "peerDependencies": {
+    "prom-client": ">= 10 <= 15"
+  },
+  "scripts": {
+    "lint:eslint": "eslint .",
+    "lint:tsc": "tsc --noEmit",
+    "lint": "yarn run lint:eslint && yarn run lint:tsc",
+    "build": "tsc -p ./tsconfig.build.json",
+    "precommit:prettier": "yarn prettier --check",
+    "precommit:eslint": "yarn eslint --max-warnings=0",
+    "precommit:lockfilelint": "yarn lockfile-lint --path yarn.lock --allowed-hosts registry.yarnpkg.com --allowed-schemes \"https:\" \"npm:\" \"workspace:\" \"patch:\"",
+    "prettier:check": "yarn prettier --check .",
+    "prettier:fix": "yarn prettier --write .",
+    "pre-commit:install": "pre-commit install",
+    "pre-commit": "pre-commit run --all-files",
+    "test": "yarn run test"
+  },
+  "version": "0.0.1"
+}
