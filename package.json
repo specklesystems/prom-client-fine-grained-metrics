@@ -1,0 +1,10 @@
+{
+  "name": "prom-client-fine-grained-metrics",
+  "packageManager": "yarn@4.2.2",
+  "scripts": {
+    "precommit:lockfilelint": "yarn lockfile-lint --path yarn.lock --allowed-hosts registry.yarnpkg.com --allowed-schemes \"https:\" \"npm:\" \"workspace:\" \"patch:\""
+  },
+  "devDependencies": {
+    "lockfile-lint": "^4.14.0"
+  }
+}
